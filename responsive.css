@@ -1,0 +1,518 @@
+/* =====================================================
+   RESPONSIVE MEDIA QUERIES — COMPLETE SYSTEM
+   Breakpoints:
+   → 1280px  Large laptops (minor tweaks)
+   → 1024px  Tablets landscape / small laptops
+   → 768px   Tablets portrait
+   → 600px   Large phones
+   → 480px   Small phones
+   → 360px   Very small phones
+   ===================================================== */
+
+/* ─── 1280px — Large Laptops ─────────────────────── */
+@media (max-width: 1280px) {
+  .hero-orbit {
+    width: 400px;
+    height: 400px;
+  }
+  .hero-visual {
+    flex: 0 0 400px;
+  }
+  .hero-float-card-1 {
+    left: -20px;
+  }
+  .hero-float-card-2 {
+    right: -10px;
+  }
+  .teacher-card {
+    width: 22%;
+  }
+  .achiever-card {
+    width: 22%;
+  }
+}
+
+/* ─── 1024px — Tablets Landscape / Small Laptops ──── */
+@media (max-width: 1024px) {
+  /* --- Hero --- */
+  .hero-visual {
+    display: none;
+  }
+  .hero-content {
+    justify-content: center;
+    text-align: center;
+    min-height: 90vh;
+  }
+  .hero-text {
+    max-width: 100%;
+  }
+  .hero-badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-tag {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-btns {
+    justify-content: center;
+  }
+  .hero-stats {
+    justify-content: center;
+  }
+
+  /* --- Layouts: switch all 2-col grids to 1-col --- */
+  .about-grid,
+  .principal-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  /* --- About image: cap height on tablet --- */
+  .about-img-wrap {
+    aspect-ratio: 16 / 9;
+    max-height: 400px;
+  }
+
+  /* --- Teachers --- */
+  .teachers-grid {
+    gap: 1.2rem;
+  }
+  .teacher-card {
+    width: 30%;
+  }
+
+  /* --- Achievers --- */
+  .achievers-grid {
+    gap: 20px;
+  }
+  .achiever-card {
+    width: 30%;
+  }
+
+  /* --- Gallery --- */
+  .gallery-grid {
+    columns: 2;
+  }
+
+  /* --- Stats --- */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  /* --- Footer --- */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    padding-right: 0;
+  }
+
+  /* --- Contact margin fix --- */
+  #contact {
+    margin-top: 0;
+  }
+}
+
+/* ─── 768px — Tablets Portrait ───────────────────── */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  /* --- Navigation --- */
+  .nav-links,
+  .nav-cta {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+
+  /* --- Section padding --- */
+  section {
+    padding: 20px;
+  }
+
+  /* --- Hero --- */
+  .hero-h1 {
+    letter-spacing: -1px;
+  }
+  .hero-stats {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .hero-stat-num {
+    font-size: 1.8rem;
+  }
+
+  /* --- Section headings --- */
+  .section-title {
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+  }
+
+  /* --- About --- */
+  .about-vmv {
+    gap: 1rem;
+  }
+
+  /* --- Principal --- */
+  .principal-card {
+    padding: 1.8rem;
+  }
+
+  /* --- Teachers: 2 per row --- */
+  .teachers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .teacher-card {
+    width: 100%;
+  }
+
+  /* --- Achievers: 2 per row --- */
+  .achievers-grid {
+    gap: 15px;
+  }
+  .achiever-card {
+    width: 46%;
+  }
+  .achiever-img img {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* --- Gallery --- */
+  .gallery-grid {
+    columns: 2;
+    column-gap: 1rem;
+  }
+
+  /* --- Fee table: allow horizontal scroll --- */
+  .fee-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .fee-table {
+    min-width: 500px;
+  }
+
+  /* --- Stats --- */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .stat-number {
+    font-size: 2.8rem;
+  }
+
+  /* --- Footer --- */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .footer-social {
+    justify-content: flex-start;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  /* --- Contact big text --- */
+  .contact-heading {
+    font-size: 28px;
+  }
+  .contact-text {
+    font-size: 15px;
+  }
+  .contact-highlight {
+    font-size: 16px;
+  }
+}
+
+/* ─── 600px — Large Phones ──────────────────────── */
+@media (max-width: 600px) {
+  /* --- Hero --- */
+  .hero-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  /* --- Teachers: 2 per row (stays same, enforce) --- */
+  .teachers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .teacher-card {
+    width: 100%;
+  }
+
+  /* --- Achievers: 1 per row --- */
+  .achievers-grid {
+    justify-content: center;
+  }
+  .achiever-card {
+    width: 90%;
+    max-width: 340px;
+  }
+
+  /* --- Gallery: 2 cols --- */
+  .gallery-grid {
+    columns: 2;
+    column-gap: 0.75rem;
+  }
+  .gallery-item {
+    margin-bottom: 0.75rem;
+  }
+
+  /* --- Stats --- */
+  .stats-section {
+    padding: 3.5rem 5%;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .stat-number {
+    font-size: 2.4rem;
+  }
+
+  /* --- Footer newsletter --- */
+  .newsletter-input-wrap {
+    flex-direction: column;
+  }
+  .newsletter-btn {
+    width: 100%;
+    padding: 12px;
+  }
+
+  /* --- Teachers filter wrap --- */
+  .teachers-filter,
+  .gallery-filter {
+    gap: 0.5rem;
+  }
+  .filter-btn {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+  }
+
+  /* --- Timeline: tighten --- */
+  .timeline {
+    padding-left: 1.5rem;
+  }
+  .timeline-item {
+    padding-left: 1.8rem;
+  }
+  .timeline-dot {
+    left: -2rem;
+  }
+}
+
+/* ─── 480px — Small Phones ──────────────────────── */
+@media (max-width: 480px) {
+  /* --- Hero text --- */
+  .hero-badge {
+    font-size: 0.65rem;
+    padding: 6px 14px;
+  }
+  .hero-h1 {
+    letter-spacing: -0.5px;
+  }
+  .hero-tag {
+    font-size: 0.95rem;
+  }
+
+  /* --- Teachers: 2 per row on small phones --- */
+  .teachers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  .teacher-name {
+    font-size: 0.85rem;
+  }
+  .teacher-subject {
+    font-size: 0.75rem;
+  }
+  .teacher-qualification {
+    font-size: 0.75rem;
+  }
+
+  /* --- Achievers: full width --- */
+  .achiever-card {
+    width: 95%;
+  }
+  .achiever-img img {
+    width: 110px;
+    height: 110px;
+  }
+
+  /* --- Gallery: 1 col --- */
+  .gallery-grid {
+    columns: 1;
+  }
+
+  /* --- Stats: 1 col --- */
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .stat-number {
+    font-size: 2.2rem;
+  }
+
+  /* --- About badge adjust --- */
+  .about-img-badge-num {
+    font-size: 1.5rem;
+  }
+
+  /* --- Principal card padding --- */
+  .principal-card {
+    padding: 1.5rem;
+  }
+
+  /* --- Contact items --- */
+  .contact-item {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  /* --- Back to top button position --- */
+  #back-top {
+    bottom: 20px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  /* --- Footer --- */
+  .footer-brand-name {
+    font-size: 1.5rem;
+  }
+  footer {
+    padding: 3rem 5% 1.5rem;
+  }
+}
+
+/* ─── 360px — Very Small Phones ─────────────────── */
+@media (max-width: 360px) {
+  :root {
+    --nav-h: 60px;
+  }
+
+  /* --- Hero --- */
+  .hero-stat-num {
+    font-size: 1.5rem;
+  }
+  .hero-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  /* --- Buttons --- */
+  .btn-primary,
+  .btn-secondary {
+    padding: 12px 24px;
+    font-size: 0.875rem;
+  }
+
+  /* --- Teachers: 1 per row on very small --- */
+  .teachers-grid {
+    grid-template-columns: 1fr;
+  }
+  .teacher-card {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  /* --- Gallery: 1 col --- */
+  .gallery-grid {
+    columns: 1;
+  }
+
+  /* --- Stats: always 2 col --- */
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .stat-number {
+    font-size: 2rem;
+  }
+  .stat-label {
+    font-size: 0.75rem;
+  }
+
+  /* --- Timeline compact --- */
+  .timeline-card {
+    padding: 1rem 1.2rem;
+  }
+
+  /* --- Mobile menu width --- */
+  .mobile-menu {
+    max-width: 100%;
+  }
+}
+
+/* ─── Utility: fee table wrapper ─────────────────── */
+/* Wrap your <table class="fee-table"> in a div.fee-table-wrap */
+.fee-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 16px;
+}
+
+/* ─── Utility: achiever heading responsive ───────── */
+@media (max-width: 768px) {
+  .achiever-heading {
+    font-size: 1.4rem;
+    margin: 2rem 0 1rem;
+  }
+}
+
+/* ─── Print: clean print layout ─────────────────── */
+@media print {
+  #navbar,
+  #loader,
+  #back-top,
+  .mobile-menu,
+  .scroll-indicator,
+  .hero-visual,
+  .hamburger {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+  section {
+    padding: 2rem 5%;
+    min-height: auto;
+    break-inside: avoid;
+  }
+  .about-grid,
+  .principal-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .stats-grid,
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery-grid {
+    columns: 2;
+  }
+}

@@ -154,6 +154,7 @@ ul {
 /* ===================== NAVBAR ===================== */
 #navbar {
   position: fixed;
+  width: 99vw;
   top: 0;
   left: 0;
   right: 0;
@@ -162,7 +163,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 3%;
+  padding: 0 0%;
   transition:
     background 0.4s,
     backdrop-filter 0.4s,

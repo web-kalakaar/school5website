@@ -1,0 +1,63 @@
+/* =====================================================
+   FIX: HORIZONTAL WHITE GAP ON RIGHT SIDE
+   Add this at the very TOP of your CSS file,
+   before everything else.
+   ===================================================== */
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Fix any section or wrapper that may overflow */
+section,
+#hero,
+#about,
+#principal,
+#teachers,
+#achievers,
+#gallery,
+#academics,
+#fees,
+#contact,
+.stats-section,
+.hero-content,
+.section-inner {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* The orbit animation and float cards are the most common culprit —
+   clip them so they never escape their container */
+.hero-visual,
+.hero-orbit,
+.hero-float-card-1,
+.hero-float-card-2 {
+  overflow: hidden;
+}
+
+/* About accent box going outside bounds */
+.about-accent {
+  overflow: hidden;
+}
+
+/* Particle canvas should never cause overflow */
+#particles-canvas,
+.hero-canvas,
+.hero-gradient {
+  overflow: hidden;
+  max-width: 100vw;
+}
+
+/* Prevent any absolutely positioned child from pushing layout */
+* {
+  box-sizing: border-box;
+}
+
+/* ─── Additional safety net for all screens ─── */
+@media (max-width: 1280px) {
+  html, body {
+    overflow-x: hidden;
+  }
+}
